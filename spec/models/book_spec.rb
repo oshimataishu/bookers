@@ -1,10 +1,13 @@
 # frozen_string_literal: true
 
+# spec/rails_helper.rbという設定ファイルを読み込む
 require 'rails_helper'
+
 
 RSpec.describe Book, "モデルに関するテスト", type: :model do
   describe '実際に保存してみる' do
     it "有効な投稿内容の場合は保存されるか" do
+      # FactoryBot.bulid(:book)で作成したBookモデルのインスタンスをexpectに渡し，be_valid
       expect(FactoryBot.build(:book)).to be_valid
     end
   end
@@ -40,6 +43,6 @@ RSpec.describe Book, "モデルに関するテスト", type: :model do
       expect(page).to have_content "can't be blank"
     end
   end
-  
+
 
 end

@@ -54,6 +54,8 @@ describe '投稿のテスト' do
     end
     context '投稿処理に関するテスト' do
       it '投稿に成功しサクセスメッセージが表示されるか' do
+        # Faker::Lorem.characteres(number:5)は5桁のランダムな文字列を入力している。
+        # Fakerはテスト用のダミーデータを作成してくれるもの。Gemfileで導入。
         fill_in 'book[title]', with: Faker::Lorem.characters(number:5)
         fill_in 'book[body]', with: Faker::Lorem.characters(number:20)
         click_button 'Create Book'

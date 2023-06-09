@@ -42,15 +42,6 @@ ul{
   color: #fff;
 }
 
-a{
-  color: #333;
-}
-
-a:hover{
-  background-color: #333;
-  color: #fff;
-}
-
 .a{
   color: #333;
   display:inline;
@@ -59,7 +50,16 @@ a:hover{
 .a:hover{
   background-color: #333;
   color: #fff;
+}a{
+  color: #333;
 }
+
+a:hover{
+  background-color: #333;
+  color: #fff;
+}
+
+
 
 
 p{
